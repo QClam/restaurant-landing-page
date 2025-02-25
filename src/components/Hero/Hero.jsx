@@ -10,6 +10,7 @@ const BgStyle = {
     backgroundSize: "cover", 
     width: "100%",
     height: "100%", 
+    zIndex: -1,
     };
 
 const Hero = () => {
