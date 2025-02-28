@@ -37,7 +37,7 @@ const DropdownLinks = [
     },
 ];
 
-const Navbar = () => {
+const Navbar = ({handleShowPopup}) => {
     return (
         <>
             <div data-aos="fade" className="bg-white shadow-md">
@@ -93,7 +93,7 @@ const Navbar = () => {
 
                             {/* login */}
                             <li>
-                                <button className="flex justify-center items-center gap-2 bg-primary text-white px-5 py-2 rounded-md hover:scale-105 duration-300">
+                                <button onClick={handleShowPopup} className="flex justify-center items-center gap-2 bg-primary text-white px-5 py-2 rounded-md hover:scale-105 duration-300">
                                     <FaUser />
                                     Đăng nhập
                                 </button>

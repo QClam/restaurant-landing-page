@@ -8,8 +8,15 @@ import Footer from './components/Footer/Footer'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Popup from './components/Navbar/Popup'
 
 const App = () => {
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleShowPopup = () => {
+    setShowPopup(true);
+  }
 
   useEffect(() => {
     AOS.init({
@@ -23,7 +30,8 @@ const App = () => {
 
   return (
     <div className='overflow-x-hidden'>
-      <Navbar />
+      <Navbar handleShowPopup={handleShowPopup} />
+      <Popup showPopup={showPopup} setShowPopup={setShowPopup}/>
       <Hero />
       <Banner /> 
       <WhyChooseUs />
